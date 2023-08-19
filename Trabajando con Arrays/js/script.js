@@ -40,34 +40,38 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   let newArray = [];
 
-  // FORMA 1
-  // for (let i = 0; i < strangeArray.length; i++){
-  //   if (typeof strangeArray[i] === "string"){
-  //     newArray.push(strangeArray[i]);
-  //   };
-  // };
+  newArray = strangeArray.filter((element) => (typeof element === "string"));
 
-  // FORMA 2
-  // strangeArray.forEach((element) => {
-  //   if (typeof element ==="string"){
-  //     newArray.push(element);
-  //   };
-  // });
+  // Practicando hacerlo con fors:
 
-  // FORMA 3
-  // for (let element of strangeArray){
-  //   if (typeof element === "string"){
-  //     newArray.push(element);
-  //   };
-  // };
+    // FORMA 1
+    // for (let i = 0; i < strangeArray.length; i++){
+    //   if (typeof strangeArray[i] === "string"){
+    //     newArray.push(strangeArray[i]);
+    //   };
+    // };
 
-  // FORMA 4
-  // for (let element in strangeArray){
-  //   if (typeof strangeArray[element] === "string"){
-  //     newArray.push(strangeArray[element]);
-  //   };
-  // };
-  
+    // FORMA 2
+    // strangeArray.forEach((element) => {
+    //   if (typeof element ==="string"){
+    //     newArray.push(element);
+    //   };
+    // });
+
+    // FORMA 3
+    // for (let element of strangeArray){
+    //   if (typeof element === "string"){
+    //     newArray.push(element);
+    //   };
+    // };
+
+    // FORMA 4
+    // for (let element in strangeArray){
+    //   if (typeof strangeArray[element] === "string"){
+    //     newArray.push(strangeArray[element]);
+    //   };
+    // };
+
   newArray.sort((a,b) => a.localeCompare(b));
   showList(newArray);
 });
