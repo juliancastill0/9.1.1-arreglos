@@ -37,6 +37,33 @@ function showList(array) {
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  // Escribe tu solución aquí
-  // Sugerencia de cómo mostrar el array => showList(strangeArray);
+
+  let newArray = [];
+
+  // for (let i = 0; i < strangeArray.length; i++){
+  //   if (typeof strangeArray[i] === "string"){
+  //     newArray.push(strangeArray[i]);
+  //   };
+  // };
+
+  // strangeArray.forEach((element) => {
+  //   if (typeof element ==="string"){
+  //     newArray.push(element);
+  //   };
+  // });
+
+  // for (let element of strangeArray){
+  //   if (typeof element === "string"){
+  //     newArray.push(element);
+  //   };
+  // };
+
+  // for (let element in strangeArray){
+  //   if (typeof strangeArray[element] === "string"){
+  //     newArray.push(strangeArray[element]);
+  //   };
+  // };
+  
+  newArray.sort((a,b) => a.localeCompare(b));
+  showList(newArray);
 });
